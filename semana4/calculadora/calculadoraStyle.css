@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+
+body, input{
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    /* background: rgba(0,255,0,0.3); */
+}
+#contenedor {
+    width: 300px;
+    margin: 25px auto;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    padding: 30px;
+    background: lightgray;
+}
+h1{
+    
+    background: lightsalmon;
+}
+input {
+    width: 100%;
+}
+input, button{
+    text-align: center;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    outline-color: green;
+}
+button {
+    width: 50px;
+    height: 50px;
+    margin: 12px;
+    padding: 0px;
+}
+
+#relleno{
+    background-color: #00FF00;
+}
+

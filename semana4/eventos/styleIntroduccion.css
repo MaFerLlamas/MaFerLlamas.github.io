@@ -1,0 +1,29 @@
+
+body{
+    margin: 100px;
+    background: #AAA;
+    font-size: 18px;
+}
+
+input{
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Roboto';
+    color:  #222;
+    background: #EEE;
+}
+
+input.tipo2{
+    text-align: right;
+}
+
+button{
+    font-size: 1.2em;
+    padding: 5px 25px;
+}
+
+.juntos{
+    display: inline;
+}
