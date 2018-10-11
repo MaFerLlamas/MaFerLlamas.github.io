@@ -34,6 +34,7 @@ inline-block
     box-sizing: border-box;
 }
 body{
+    margin: 0;
     text-align: center;
     font-family: 'Arial', serif;
 }
@@ -43,6 +44,7 @@ a{
 }
 
 #barra{
+    margin-top: 5px; 
     text-align: right;
 }
 
@@ -125,21 +127,43 @@ a{
 }
 
 .pie{
-    text-align: left;
-    background: lightpink;
+    color: grey;
+    font-size: 0.7em;
+    background: rgba(185, 184, 184, 0.226);
     width: 100%;
-    height: 44px;
+    height: 40px;
+}
+
+.pie a{
+    color: grey;
+    margin: 15px;
+    display: inline-block;
+
+}
+
+.arriba{
+    font-size: 0.8em;
+    margin-top: 148px;
+    border-top: 0.5px solid  rgba(167, 164, 164, 0.534);
+    border-bottom: 0.5px solid  rgba(167, 164, 164, 0.534);
+    text-align: left;
+    padding: 5px;
+    padding-left: 20px;
 }
 
 #pieDer{
+    margin-left: auto;
+    width: 49.5%;
     display: inline-block;
     text-align: right;
 }
 
 #pieIzq{
+    width: 49.5%;
     display: inline-block;
     text-align: left;
 }
+
 
 .boton:hover{
     border: 1px solid rgba(172, 158, 158, 0.3);
