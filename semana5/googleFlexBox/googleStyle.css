@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+#all{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#contenedor{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#barra img{
+    width: 20px;
+}
+
+.elementos{
+    color: rgba(32, 31, 31, 0.952);
+    padding: 3px;
+    margin: 5px;
+    vertical-align: middle;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+#btnSign{
+    display: inline-block;
+    padding: 0.8em 1.7em;
+    margin: 0 1em;
+    border: none;
+    background: rgba(78, 92, 245, 0.979);
+    font-size: 0.8em;
+    font-weight: 700; 
+    color: white;
+    border-radius: 4px;
+}
+
+#buscador{
+    display: flex;
+    width: 43%;
+    height: 44px;
+    border: 1px solid rgba(172, 158, 158, 0.3);
+    border-style: solid;
+    border-radius: 2px;
+    box-shadow: 0px 3px 5px rgba(52, 52, 54, 0.3);
+}
+
+#buscador input{
+    flex-shrink: 0;
+    flex-grow: 1;
+    border: 0;
+    outline: none;
+    font-family: 'Arial', serif;
+    font-size: 1em;
+}
+
+#buscador div{
+    text-align: center;
+}
+
+#buscador img{
+    width: 55%;
+    vertical-align: middle;
+    line-height: 10px;  
+}
+
+
+#botones{
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.boton{
+    width: 150px;
+    padding: 10px;
+    margin-left: 0px;
+    margin-right: 2px;
+    margin-top: 13.6px;
+    margin-bottom: 11px;
+    padding: 0.8em 1.7em;
+    background: rgba(161, 122, 122, 0.1);
+    font-size: 0.8em;
+    font-weight: 700; 
+    color: rgb(124, 123, 123);
+    cursor: default;
+    text-align: center;
+}
+
+.boton:hover{
+    border: 1px solid rgba(172, 158, 158, 0.3);
+    color: black;
+    margin-left: 0px;
+    margin-right: 1px;
+    margin-top: 12.6px;
+    margin-bottom: 10px;
+}
+
+a:hover{
+    text-decoration: underline;
+}
