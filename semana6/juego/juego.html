@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Juego Control</title>
+    <link rel="stylesheet" href="juego.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+</head>
+<body>
+    <div id="modoJuego">
+            <div id="btnModo1" class="listos">Player VS. CPU</div>
+            <div id="btnModo2" class="listos">Player VS. Player</div>
+    </div>
+    <div id="config">
+        <div class="listos" id="btnInfo">Info.</div>
+        <div class="listos" id="btnMenu">Modo Juego</div>
+    </div>
+    <div id="contenedor">
+        <div id="aside-izq">
+            <div id="titulo">
+                <h1>Juego Control</h1>
+            </div>
+            <div id="elementos">
+                <div id="imgReglas"> <img src="reglas.png" alt="reglas"/> </div>
+                <div id="top"> 
+                    <div><img id="tierra" class="imgSelect" src="EmblemaTierraControl.png" alt="tierra control"/></div>
+                </div>
+                <div id="center"> 
+                    <div><img id="aire" class="imgSelect" src="EmblemaAireControl.png" alt="aire control"/></div>
+                    <div ><img  id="metal" class="imgSelect" src="EmblemaMetalControl.png" alt="metal control"/></div>
+                </div>
+                <div id="bottom"> 
+                    <div><img id="agua" class="imgSelect" src="EmblemaAguaControl.png" alt="agua control"/></div>
+                    <div><img id="fuego" class="imgSelect" src="EmblemaFuegoControl.png" alt="fuego control"/></div>
+                </div>
+            </div> 
+        </div>
+        <div id="aside-der">
+            <h4 id="ganador"></h4>
+            <div id="contentSeleccion"> 
+                <div class="seleccionados">
+                    <div id="lblj1">Jugador 1:</div>
+                    <div class="imgJ"><img id="j1" src=""/></div>
+                    <div class="listos" id="btnListo1">Listo</div>
+                </div>
+                <p>VS.</p>
+                <div class="seleccionados">
+                    <div id="lblj2">CPU:</div>
+                    <div class="imgJ"><img id="j2" src=""/></div>
+                    <div class="listos" id="btnListo2">Random</div>
+                </div>
+            </div>
+            <div id="btnJugar">Jugar</div>
+        </div>
+    </div>
+    <script src="juego.js"></script>
+</body>
+</html>

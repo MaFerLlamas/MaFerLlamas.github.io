@@ -1,0 +1,205 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Righteous', cursive;
+    font-size: 1.2em;
+}
+
+
+#contenedor{
+    /* background: rgba(68, 178, 241, 0.486); */
+    display: flex;
+    flex-direction: row;
+    margin-top: 8.5px;
+}
+
+#titulo{
+    width: 100%;
+    border-top: 5px solid rgba(15, 14, 14, 0.349);
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+#aside-izq{
+    width: 140vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#elementos{
+    background:rgba(142, 157, 243, 0.185); 
+    width: 100%;
+    text-align: center;
+    border-bottom: 5px solid rgba(15, 14, 14, 0.349);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgSelect{
+    width: 108px;
+}
+
+#modoJuego{
+    background: rgba(142, 157, 243, 0.521);
+    position: fixed; 
+    width: 100%;
+    height: 180vh;
+    top: 0;
+    left: 0; 
+    /* visibility: hidden; */
+}
+
+#modoJuego div{
+    width: 40%;
+    background: #3369ff; 
+    margin: 145px auto;
+    font-size: 1.2em;
+}
+
+#imgReglas{
+    position: fixed;
+    visibility: hidden;
+} 
+
+#config{
+    font-size: .5em;
+    width: 60px;
+    position: fixed;
+    top: 30px;
+    left: 30px; 
+    visibility: hidden;
+}
+
+#btnInfo{
+    margin-bottom: 5px;
+}
+
+#top{
+    width: 500px;
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#center{
+    width: 500px;
+    height: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#bottom{
+    width: 500px;
+    height: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#aside-der{    
+    width: 80vh;   
+    border: 5px solid rgba(15, 14, 14, 0.349);
+    background:  rgba(142, 157, 243, 0.185);
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-around;
+}
+
+#ganador{
+     width: 95%;
+    text-align: center;
+}
+
+#contentSeleccion{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.seleccionados{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.seleccionados img{
+    width: 110px;
+}
+
+.imgJ{
+    width: 115px;
+    height: 115px;
+    border-style: solid;
+}
+.seleccionados div{
+    margin: 1em;
+}
+
+.listos{
+    background: #3369ff;
+    padding: 0.7em;
+    border-radius: 0.15em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #FFFFFF;
+    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+    text-align: center;
+    cursor: pointer;
+}
+
+#btnListo2{
+    background: rgba(15, 14, 14, 0.349);
+} 
+
+#btnJugar{
+    width: 70%;
+    text-align: center;
+    background: rgba(15, 14, 14, 0.349);
+    padding: 0.7em;
+    border-radius: 0.15em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #ffffff;
+    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17); 
+    cursor: pointer;  
+}
+
+.imgSelect:hover{
+    cursor: pointer;
+    outline: 5px solid rgb(80, 205, 236);
+}
+
+.imgSelect:hover > #imgReglas{
+    visibility: visible;
+}
+
+.listos:hover{
+    background:  rgb(80, 205, 236);
+}
+
+/* #btnJugar:hover{
+    background: rgba(0, 0, 0, 0.575);
+} */
+
+
+#modoJuego div:hover{
+    background:  rgb(80, 205, 236);
+}
+
