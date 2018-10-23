@@ -120,10 +120,18 @@ body{
 }
 
 #ganador{
-     width: 95%;
+    text-align: center;
+    width: 95%;
     text-align: center;
 }
 
+#contentGanador{
+    text-align: center
+}
+
+#imgGanador{
+    width: 60%;
+}
 #contentSeleccion{
     text-align: center;
     display: flex;

@@ -104,7 +104,9 @@ function inicializar(){
   }
   btnJugar.innerText = "jugar";
   btnJugar.style.background = "rgba(15, 14, 14, 0.349)"; 
+
   //iniciar imagenes
+  document.querySelector("#imgGanador").src = "";
   document.querySelector("#j1").style.visibility = "visible";
   document.querySelector("#j2").style.visibility = "visible";
   document.querySelector("#j1").src = "";
@@ -226,12 +228,15 @@ function jugar(){
       //empate
       if (select1 === select2){
         ganador = "EMPATE";
+        document.querySelector("#imgGanador").src = (select2+".gif");
       }else{
         let gana = ObjRegla[select1];
         if (gana.indexOf(select2) !== -1){
-          ganador = "jugador 1 gana \n" + select1 +" vence a " + select2;
+          ganador = "jugador 1 gana " + select1 +" vence a " + select2;
+          document.querySelector("#imgGanador").src = (select1+".gif");
         }else{
           ganador = "jugador 2 gana \n" + select2 +" vence a " + select1;
+          document.querySelector("#imgGanador").src = (select2+".gif");
         }
   
       }
