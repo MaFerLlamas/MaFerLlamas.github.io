@@ -1,0 +1,80 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Special Elite', cursive;
+  background: rgb(252, 249, 249);
+  
+}
+#top{
+  width: 99%;
+  position: fixed;
+  top: 5px;
+  height: 100px;
+  background: rgb(196, 231, 221);
+  box-shadow: 10px 10px 8px 5px #888888;
+  border-radius: 5px;
+  display: flex;
+}
+
+#letras{
+  width: 50%;
+}
+
+#logo{
+  width: 100px;
+}
+
+#personajes{
+  margin-top: 130px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+ 
+}
+
+.tarjeta{
+  width: 50vh;
+  box-shadow: 5px 5px rgba(76, 120, 138, 0.514), 10px 10px rgba(0, 255, 34, 0.493); 
+  background: rgba(194, 82, 48, 0.514);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+
+.tarjetaRoja{
+  background: rgba(194, 82, 48, 0.514);
+  box-shadow: 5px 5px rgba(76, 120, 138, 0.514), 10px 10px rgba(0, 255, 34, 0.493); 
+}
+
+.tarjetaAzul{
+  background:  rgba(76, 120, 138, 0.514);
+  box-shadow: 5px 5px rgba(0, 255, 34, 0.493), 10px 10px rgba(194, 82, 48, 0.514) ; 
+}
+
+.tarjetaVerde{
+  background: rgba(0, 255, 34, 0.493);
+  box-shadow: 5px 5px rgba(194, 82, 48, 0.514), 10px 10px rgba(76, 120, 138, 0.514); 
+}
+
+.content-img{
+  text-align: center;
+}
+.tarjeta img{
+  width: 60%;
+  margin: 5%;
+}
+
+.content-info{
+  text-align: center;
+}
+
+.atributo{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8em;
+}
