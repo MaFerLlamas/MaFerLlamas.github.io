@@ -10,69 +10,134 @@
   o puede ser texto plano
 */
 
-// Fetch aplicado al API de rick and morty
+// Globals
+let url = "https://rickandmortyapi.com/api/character/?page="
+let urlNext;
+let urlPrev;
+let actual = 1;
 
-let respuesta = function(info) {
-  console.log(info);
-  let personajes = document.querySelector('#personajes');
-  let contColor=0;
-  let color;
-    for(let i=0;i<20;i++){
-      if (contColor===0){
-        color="tarjetaRoja";
-      }else if(contColor===1){
-        color="tarjetaAzul";
-      }else if (contColor===2){
-        color="tarjetaVerde";
-        contColor = -1;
-      }
-      personajes.innerHTML += 
-      `<div class="tarjeta ${color}">
-          <div class="content-img">
-            <img class="imgPersona" src="${info.results[i].image}" />
-          </div>
-          <div class="content-info">
-            <p>
-              <label class="atributo">name:</label>
-              <label>${info.results[i].name}</label>
-            </p>
-            <p>
-              <label class="atributo">gender:</label>
-              <label>${info.results[i].gender}</label>
-            </p>
-            <p>
-                <label class="atributo">origin:</label>
-                <label>${info.results[i].origin.name}</label>
-            </p>
-            <p>
-                <label class="atributo">species:</label>
-                <label>${info.results[i].species}</label>
-            </p>
-            <p>
-                <label class="atributo">status:</label>
-                <label>${info.results[i].status}</label>
-            </p>
-          </div>
-      </div>`
-      contColor++;
+//btn forward and rewind
+let rewind = document.querySelector("img[src='rewind.png']");
+let forward = document.querySelector("img[src='forward.png']");
+let back = document.querySelector("img[src='back.png']");
+let next = document.querySelector("img[src='next.png']");
+
+let buscar = document.querySelector("#txtBusca");
+
+buscar.addEventListener('input',function(){
+  fetch("https://rickandmortyapi.com/documentation/#filter-characters?name=rick")
+  .then(objData => objDta.json())
+  .then(generate);
+});
+
+back.addEventListener('click',function(){
+  if (urlPrev != ""){
+    fetch(urlPrev).then(objData => objData.json()).then(generate);
+    actual --;
+  }
+});
+
+next.addEventListener('click',function(){
+  if (urlNext != ""){
+    fetch(urlNext).then(objData => objData.json()).then(generate);
+    actual ++;
+  }
+});
+
+rewind.addEventListener('click',function(){
+  actual = 1;
+  fetch(url+'1').then(objData => objData.json()).then(generate);
+});
+
+forward.addEventListener('click',function(){
+  actual = 25;
+  fetch(url+'25').then(objData => objData.json()).then(generate);
+})
+
+let personajes = document.querySelector('#personajes');
+
+
+// Fetch aplicado al API de rick and morty
+let addCard = function (character){
+  let cardTemplate = 
+  `<div class="tarjeta">
+  <div class="content-img">
+  <img class="imgPersona" src="${character.image}" />
+  
+  </div>
+  <div class="content-info">
+  <p>
+  <label class="atributo">name:</label>
+  <label>${character.name}</label>
+  </p>
+  <p>
+  <label class="atributo">gender:</label>
+  <label>${character.gender}</label>
+  </p>
+  <p>
+  <label class="atributo">origin:</label>
+  <label>${character.origin.name}</label>
+  </p>
+  <p>
+  <label class="atributo">species:</label>
+  <label>${character.species}</label>
+  </p>
+  <p>
+  <label class="atributo">status:</label>
+  <label>${character.status}</label>
+  </p>
+  </div>
+  </div>`
+  ;
+  personajes.innerHTML += cardTemplate;
+}
+
+function generatePages(){
+  let inicio;
+  let fin;
+  if (actual<5){
+    inicio = 1;
+    fin = 9;
+  } else if (actual>16){
+    inicio = 17;
+    fin = 25;
+  }else{
+    inicio = parseInt(actual) - 4;
+    fin = parseInt(actual) + 4;
+  }
+  
+  
+  let numeros = document.querySelector('#pages');
+  numeros.innerHTML = "";
+  for (let i = inicio; i <= fin ; i++){
+    let numTemplate = `<a class="num-page">${i}</a>`;
+    numeros.innerHTML += numTemplate;
+  }
+  
+  let arrNum = document.querySelectorAll('.num-page');
+  for (let i = 0; i < arrNum.length; i++){
+    arrNum[i].addEventListener('click',changePage);
+    if (arrNum[i].text == actual){
+      arrNum[i].style.color = "blue";
+    }
   }
 }
-// `
-// <div>
-//   <img src="${a.image}">
-//   <div>${a.name}</div>
-//   <div>${a.status}</div>
-//   <div>${a.species}</div>
-//   <div>${a.type}</div>
-//   <div>${a.gender}</div>
-// </div>
-// `
-// <div>
-//     <img src="${info.results[10].image}">
-//     <div>${info.results[10].name}</div>
-//     <div>${info.results[10].status}</div>
-//     <div>${info.results[10].species}</div>
-//     <div>${info.results[10].type}</div>
-//     <div>${info.results[10].gender}</div>
-//   </div>
-fetch("https://rickandmortyapi.com/api/character/").then(info => info.json()).then(respuesta)
+
+function changePage(){
+  let page = this.text;
+  actual = page;
+  fetch(url+page).then(objData => objData.json()).then(generate);
+}
+
+let generate = function(objData) {
+  console.log(objData);
+  generatePages();
+  personajes.innerHTML = "";
+  urlNext = objData.info.next;
+  urlPrev = objData.info.prev;
+  for(let i = 0; i < objData.results.length; i++){
+    addCard(objData.results[i]);
+  }
+}
+
+fetch("https://rickandmortyapi.com/api/character/").then(objData => objData.json()).then(generate);
