@@ -1,0 +1,165 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Special Elite', cursive;
+  background: rgb(252, 249, 249);
+  
+}
+#top{
+  width: 99%;
+  position: fixed;
+  top: 5px;
+  height: 150px;
+  background: rgb(196, 231, 221);
+  box-shadow: 10px 10px 8px 5px #888888;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-img{
+  display: flex;
+  flex-direction: row;
+  width: 32%;
+}
+
+#letras{
+  margin: 0;
+  width: 100%;
+}
+
+#logo{
+  width: 100px;
+}
+
+#nav-busqueda{
+  height: 150px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+#nav-iconos{
+  margin: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#buscador{
+  width:  100%;
+  margin-bottom: 15px;
+  height: 40px;
+}
+
+#buscador select{
+ height: 80%;
+ font-size: 1.5em;
+ background: rgba(76, 120, 138, 0.514);
+ border-radius: 10px;
+}
+#txtBusca{
+  width: 80%;
+  border: 2px solid rgba(0, 255, 34, 0.493);
+  border-radius: 10px;
+  background-color: white;
+  font-size: 1.5em;
+  padding-left: 15px;
+}
+
+.icono{
+  margin: 10px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.icono img{
+  width: 100%;
+}
+
+.num-page{
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: blueviolet;
+  margin: 3px;
+}
+
+#personajes{
+  margin-top: 170px;
+  display: grid;
+  grid-template-columns: repeat(4,316px); 
+  grid-column-gap: 15px;
+  justify-content: start;
+}
+
+.tarjeta{
+  width: 50vh;
+  box-shadow: 5px 5px rgba(76, 120, 138, 0.514), 10px 10px rgba(0, 255, 34, 0.493); 
+  background: rgba(194, 82, 48, 0.514);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+
+ .tarjeta:nth-child(3n){
+  background: rgba(194, 82, 48, 0.514);
+  box-shadow: 5px 5px rgba(76, 120, 138, 0.514), 10px 10px rgba(0, 255, 34, 0.493); 
+} 
+
+.tarjeta:nth-child(3n+1){
+  background:  rgba(76, 120, 138, 0.514);
+  box-shadow: 5px 5px rgba(0, 255, 34, 0.493), 10px 10px rgba(194, 82, 48, 0.514) ; 
+}
+
+.tarjeta:nth-child(3n+2){
+  background: rgba(0, 255, 34, 0.493);
+  box-shadow: 5px 5px rgba(194, 82, 48, 0.514), 10px 10px rgba(76, 120, 138, 0.514); 
+}
+
+.content-img{
+  text-align: center;
+}
+.content-img img{
+  width: 60%;
+  margin: 5%;
+}
+.content-dead{
+  position: absolute;
+  width: 30%;
+}
+
+.imgDead{
+  width: 40%;
+  top: 40%;
+  left: 50%;
+  position: relative;
+}
+.content-info{
+  text-align: center;
+}
+
+.atributo{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8em;
+}
+
+.icono:hover{
+  margin: 0;
+  width: 40px;
+}
+
+.num-page:hover{
+  font-size: 2em;
+  color: rgb(27, 233, 27);
+}
+
