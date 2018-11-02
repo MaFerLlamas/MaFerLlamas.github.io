@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box; 
+}
+
+body{
+
+    font-family: 'Teko', sans-serif;
+}
+
+.buttonLog{
+    display: inline-block;
+    font-family: 'Teko', sans-serif;
+    box-shadow: 6.8px 9.6px 0.5px 1.2px grey;
+    font-size: 2em;
+    outline: none;
+    padding: 0px 35px;
+    margin: 15px;
+    border-radius: 15px; 
+    cursor: pointer;
+}
+
+#btnLogin{
+    background: rgba(68, 185, 157, 0.449);
+}
+
+#btnLogout{
+    background: rgba(185, 68, 68, 0.449);
+}
+
+.btn-disabled{
+    background: rgba(49, 49, 49, 0.449);
+}
+.buttonLog:hover{
+    box-shadow: 6.8px 9.6px 0.1px 0.5px rgba(32, 32, 32, 0.658);
+    border: 1px solid rgb(10, 3, 3);
+}
+
+#btnLogin:hover{
+    background-color: rgba(68, 185, 158, 0.877);  
+}
+
+#btnLogout:hover{
+    background-color: rgba(185, 68, 68, 0.877);
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FireBase</title>
+
+    <!-- Styles -->
+    <link href="indexStyle.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+</head>
+<body>
+    <h1>Firebase</h1>
+    <div id="content-counter">0</div>
+    <div class="buttonLog" id="btnLogin">Login</div>
+    <div class="buttonLog" id="btnLogout">Logout</div>
+    <br/>
+    <label for="txtCounter">Contador: </label>
+    <input type="text" id="txtCounter" placeholder="valor del contador">
+    <div class="buttonLog" id="btnCounter">Contador</div>
+    <!-- Scripts -->
+    
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAn6Zv4inGq12OU3rQ95n1eaS8fDJ30sUM",
+        authDomain: "manzana-bdf95.firebaseapp.com",
+        databaseURL: "https://manzana-bdf95.firebaseio.com",
+        projectId: "manzana-bdf95",
+        storageBucket: "manzana-bdf95.appspot.com",
+        messagingSenderId: "361237196987"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="indexScript.js"></script>
+</body>
+</html>
