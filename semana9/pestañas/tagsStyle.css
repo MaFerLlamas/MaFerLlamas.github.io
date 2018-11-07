@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #CCC;
+  text-align: center;
+  font-family: 'Chicle', cursive;
+  font-size: 1.5em;
+  color: #222;
+}
+
+h1 {
+  font-family: 'Miltonian Tattoo', cursive;
+  font-size: 2em;
+}
+
+#content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#content-info{
+  display: flex;
+  flex-direction: column;
+  width: 60vw; 
+  position: relative;
+}
+
+#content-tabs{
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabs{
+  border-radius: 5%;
+  margin: 5px;
+  padding: 5px;
+  background-color: rgba(68, 31, 31, 0.692);
+  border-bottom: 5px solid rgba(68, 31, 31, 0.692) ;
+  cursor: pointer;
+  color: black;
+}
+
+.tabs img{
+  vertical-align: middle;
+}
+
+#content-cards{
+  border-radius: 2%;
+  position: absolute;
+  background-color: rgba(185, 147, 147, 0.918);
+  top: 70px;
+  text-align: justify;
+  padding: 15px;
+}
+
+.cards{
+  display: none;
+}
+
+.actual{
+  display: block;
+}
+
+.actual-Tab{
+  background-color: rgba(185, 147, 147, 0.918);
+}
