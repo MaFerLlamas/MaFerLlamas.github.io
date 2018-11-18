@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.img-background{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("cielo.png");
+    display: flex;
+    flex-direction: column;
+}
+
+
+.content-letters{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.letter{
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+    color: #FFCC00;
+    line-height: 50px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    border: 2px solid #FFCC00;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.letter:hover{
+    font-size: 2.3em;
+    color: white;
+    border: 1px solid #FFCC00;
+    box-shadow: 5px 1px 5px 1px #FFCC00;
+    
+}
+
+.content-player{
+    display: flex;
+    justify-content: space-around;
+}
+
+.player{
+    margin-top: 10px;
+    padding: 0 10px;
+    color:  white;
+    line-height: 50px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    border: 2px solid #FFCC00;
+    text-align: center;
+}
+
+.content-zone{
+    display: grid;
+    grid-template-columns: 100px repeat(1,1fr) 130px;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.character{
+    height: 30vh;
+    width: 15vh;
+    background-size: cover;
+}
+
+.luke{
+    background-image: url('luke.png');
+}
+
+.darth{
+    width: 18.6vh;
+    background-image: url('darth.png');
+}
+
+.laser img{
+    top: 110;
+    height: 70vh;
+}
+
+.alert{
+    animation: 5s alert;
+}
+
+@keyframes alert{
+    from {
+        background-image: url('lukeAlert.png');
+    }
+
+    to {
+        background-image: url('luke.png');
+    }
+}
