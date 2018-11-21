@@ -52,6 +52,7 @@ body{
 }
 
 .player{
+    display: none;
     margin-top: 10px;
     padding: 0 10px;
     color:  white;
@@ -90,11 +91,11 @@ body{
     height: 70vh;
 }
 
-.alert{
-    animation: 5s alert;
+.alertLuke{
+    animation: 5s alertLuke;
 }
 
-@keyframes alert{
+@keyframes alertLuke{
     from {
         background-image: url('lukeAlert.png');
     }
@@ -102,4 +103,38 @@ body{
     to {
         background-image: url('luke.png');
     }
+}
+
+.alertDarth{
+    animation: 5s alertDarth;
+}
+
+@keyframes alertDarth{
+    from {
+        background-image: url('darthAlert.png');
+    }
+
+    to {
+        background-image: url('darth.png');
+    }
+}
+
+.content-word{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.piece-word{
+    width: 60px;
+    height: 60px;
+    margin-top: 1.5vw;
+    color: #FFCC00;
+    line-height: 60px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    border: 2px solid #FFCC00;
+    text-align: center;
+    vertical-align: middle;
 }
