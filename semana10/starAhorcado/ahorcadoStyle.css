@@ -65,7 +65,7 @@ body{
 
 .content-zone{
     display: grid;
-    grid-template-columns: 100px repeat(1,1fr) 130px;
+    grid-template-columns: 130px repeat(1,1fr) 130px;
     align-items: center;
     justify-items: center;
 }
@@ -73,16 +73,17 @@ body{
 
 .character{
     height: 30vh;
-    width: 15vh;
+    width: 20vh;
     background-size: cover;
 }
 
 .luke{
+
     background-image: url('luke.png');
 }
 
 .darth{
-    width: 18.6vh;
+ 
     background-image: url('darth.png');
 }
 
@@ -119,6 +120,39 @@ body{
     }
 }
 
+.lukeLoses{
+    animation: 5s lukeLoses;
+    animation-fill-mode: forwards;
+}
+@keyframes lukeLoses{
+    15%{
+        background-image: url('fall/L1.png');
+    }
+
+    30%{
+        background-image: url('fall/L2.png');
+    }
+
+    45%{
+        background-image: url('fall/L3.png');
+    }
+
+    60%{
+        background-image: url('fall/L4.png');
+    }
+
+    75%{
+        background-image: url('fall/L5.png');
+    }
+
+    90%{
+        background-image: url('fall/L6.png');
+    }
+
+    100%{
+        background-image: url('fall/L7.png');
+    }
+}
 .content-word{
     display: flex;
     justify-content: space-around;
@@ -137,4 +171,45 @@ body{
     border: 2px solid #FFCC00;
     text-align: center;
     vertical-align: middle;
+} 
+
+.content-modal{
+    border: 2px solid white;
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    display: none;
+    top: 24vh;
+    right: 28vw;
+    transition: opacity 0.7s;
+}
+
+.modal{
+    text-align: center;
+    box-shadow: 8px 2px 25x #00000057; 
+    width: 600px;
+    padding: 10px 20px;
+    margin: 17% auto;
+    border-radius: 8px;
+}
+
+
+.message {
+    font-size: 1.2em;
+    color: #FFCC00;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+.win {
+    font-size: 3em;
+    color:white;
+
+}
+.lose{
+    font-size: 3em;
+    color: #cf2626;
+}
+
+#restart:hover {
+    color:white;
 }

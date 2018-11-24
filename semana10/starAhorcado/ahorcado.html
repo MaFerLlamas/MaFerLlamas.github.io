@@ -6,10 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>StarAhorcado</title>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=News+Cycle:400,700" rel="stylesheet"/>
     <link href="ahorcadoStyle.css" rel="stylesheet"/>
     <link href="darth.png" rel="icon">
 </head>
 <body>
+    <div class="content-modal">
+        <div class="modal">
+            <a class="message" href="#"></a><br/><br/>
+            <a class="message" href="#"></a><br/><br/>
+            <a id="restart" class="message" href="#">Volver a Jugar</a><br/>
+        </div>
+    </div>
     <div class="img-background">
         <div class="content-letters"></div>
         <div class="content-player">
@@ -17,17 +25,16 @@
             <div class="player">Player 2</div>
         </div>
         <div class="content-zone">
-            <div class="character luke">
-            </div>
+            <div class="character luke"></div>
             <div class="laser">
                 <img src="laser.png"/>
             </div>
             <div class="character darth">
             </div>
         </div>
-        <div class="content-word">
-        </div>
+        <div class="content-word"></div>
     </div>
+    <script src="words.js"></script>
     <script src="ahorcadoScript.js"></script>
 </body>
 </html>
