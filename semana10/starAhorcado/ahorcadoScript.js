@@ -86,7 +86,6 @@ function userAttempt(e){
             offset = parseFloat((midScreen+pos)/attemps);
             console.log(offset);
             e.target.style.color = "grey";
-            console.log("desplazamiento" + offset);
             // remove class to avoid over class
             luke.classList.remove('alertLuke');
             // add animation
@@ -104,7 +103,6 @@ function userAttempt(e){
 
                 mns.innerText = "¡PERDISTE!";
                 mns.classList.add('lose');
-                document.querySelector('.message:nth-child(2n)').innerText = word;
                 
                 isEnd = true;
                 
@@ -114,6 +112,7 @@ function userAttempt(e){
     }
     if (isEnd){
         document.querySelector('.content-modal').style.display = "block";
+        document.querySelector('.message:nth-child(2n)').innerText = word;
         for (let i = 0; i < btnsLetters.length; i++){
 
             btnsLetters[i].removeEventListener('click',userAttempt);
@@ -151,7 +150,6 @@ function initialize(){
     let contentWord = document.querySelector('.content-word');
     contentWord.innerHTML = "";
     for(let i = 0; i < wordSize; i++){
-        console.log(word[i]);
         word[i] = word[i].toUpperCase();
         contentWord.innerHTML += `<div class="piece-word"></div>`;
     }
