@@ -174,10 +174,10 @@ body{
 } 
 
 .content-modal{
-    border: 2px solid white;
-    background-color: rgba(0,0,0,.5);
-    position: fixed;
     display: none;
+    border: 2px solid white;
+    background-color: #00000080;
+    position: fixed;
     top: 24vh;
     right: 28vw;
     transition: opacity 0.7s;
@@ -212,4 +212,18 @@ body{
 
 #restart:hover {
     color:white;
+}
+
+.content-attemps{
+    display: block;
+    background-color: #00000080;
+    position: fixed;
+    top: 14vh;
+    left: 0vw;
+    transition: opacity 0.7s;
+}
+
+.content-attemps a{
+    font-size: 1.5em;
+    color: #cf2626;
 }
