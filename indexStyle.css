@@ -44,3 +44,10 @@ a:hover{
 #logo{
     margin-top: 35px;
 }
+#cv{
+    /*  rgb(43, 122, 116); */
+    color: white;
+    background: red;
+    margin: 0;
+    padding: 1%;
+}
