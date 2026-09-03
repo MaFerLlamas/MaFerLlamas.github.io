@@ -1,69 +1,416 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portafolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
-    <link rel="stylesheet" href="indexStyle.css">
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>El Show Debe Continuar — 17 de octubre</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Creepster&family=Space+Mono:wght@400;700&family=Special+Elite&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <img id="logo" src="BaitFull.png" width="100px"/>
-    <h1 id="titulo">Portafolio</h1>
-    <br>
-    <a id="cv" href="CV-Maria-avila-Fullstack&Audiovisual.pdf"> Descargar CV</a>
-    <br>
-    <br>
-    <br>
-    <div class="semana">
-        <h3>Semana 4</h3>
-        <ol>
-            <li><a href="semana4/modals/index.html">Modals</a></li>
-            <li><a href="semana4/eventos/index.html">Eventos</a></li>
-            <li><a href="semana4/calculadora/index.html">Calculadora</a></li>
-            <li><a href="semana4/masaCorporal/index.html">Calcular Masa Corporal</a></li>
-        </ol>
+
+  <div class="noise"></div>
+
+  <!-- ================================
+       BARRA SUPERIOR
+  ================================ -->
+
+  <header class="topbar">
+
+    <div class="logo">
+      ✶ 17.10.26
     </div>
-    <div class="semana">
-        <h3>Semana 5</h3>
-        <ol>
-            <li><a href="semana5/google1/index.html">Google 1</a></li>
-            <li><a href="semana5/google2/index.html">Google 2</a></li>
-            <li><a href="semana5/googleFlexBox/index.html">Google con Flex Box</a></li>
-        </ol>
-    </div>
-    <div class="semana">
-        <h3>Semana 6</h3>
-        <ol>
-            <li><a href="semana6/juego/juego.html">Juego Control</a></li>
-        </ol>
-    </div>
-    <div class="semana">
-        <h3>Semana 7</h3>
-        <ol>
-            <li><a href="semana7/RickyMorty/rickeyMorty.html">Ricky & Morty</a></li>
-        </ol>
-    </div>
-    <div class="semana">
-        <h3>Semana 8</h3>
-        <ol>
-            <li><a href="semana8/RickyMorty/rickeyMorty.html">Ricky & Morty con Grid</a></li>
-            <li><a href="https://manzana-bdf95.firebaseapp.com/">Firebase Base de datos</a></li>
-        </ol>
-    </div>
-    <div class="semana">
-        <h3>Semana 9</h3>
-        <ol>
-            <li><a href="semana9/imagenes/index.html">Imagenes</a></li>
-            <li><a href="semana9/pestañas/tags.html">Pestañas</a></li>
-        </ol>
-    </div>
-    <div class="semana">
-        <h3>Semana 10</h3>
-        <ol>
-            <li><a href="semana10/starAhorcado/ahorcado.html">Ahorcado</a></li>
-        </ol>
-    </div>
+
+    <nav>
+      <a href="#inicio">INICIO</a>
+      <a href="#detalles">DETALLES</a>
+      <a href="#vestimenta">VESTIMENTA</a>
+      <a href="#confirmar">CONFIRMA</a>
+    </nav>
+
+  </header>
+
+
+  <!-- ================================
+       HERO
+  ================================ -->
+
+  <main>
+
+    <section id="inicio" class="hero">
+
+      <div class="tape tape-top">
+        NO HAY VUELTA ATRÁS ✦
+      </div>
+
+      <div class="disco-ball"></div>
+
+      <div class="moon"></div>
+
+      <div class="target"></div>
+
+      <div class="arrow-note">
+        ← POR AQUÍ
+      </div>
+
+      <div class="haunted-house">
+        ♠
+      </div>
+
+      <div class="hero-copy reveal">
+
+        <p class="eyebrow">
+          ESTÁS INVITAD@
+        </p>
+
+        <p class="eyebrow">
+          A MI MINI FIESTA DE CUMPLEAÑOS
+        </p>
+
+        <h1>
+          <span>EL SHOW</span>
+          <span>DEBE</span>
+          <span class="party">CONTINUAR</span>
+        </h1>
+
+        <div class="date-stamp">
+          17 OCTUBRE 2026
+        </div>
+
+        <p class="hero-subtitle">
+          Una noche ligeramente extraña.<br>
+          Vamos a meter la casa por la ventana.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         CUENTA REGRESIVA
+    ================================ -->
+
+    <section class="countdown-section">
+
+      <p class="section-kicker">
+        EL TIEMPO CORRE...
+      </p>
+
+      <div class="countdown">
+
+        <div class="counter">
+          <strong id="days">00</strong>
+          <span>DÍAS</span>
+        </div>
+
+        <div class="counter">
+          <strong id="hours">00</strong>
+          <span>HORAS</span>
+        </div>
+
+        <div class="counter">
+          <strong id="minutes">00</strong>
+          <span>MINUTOS</span>
+        </div>
+
+        <div class="counter">
+          <strong id="seconds">00</strong>
+          <span>SEGUNDOS</span>
+        </div>
+
+      </div>
+
+      <p
+        id="countdown-message"
+        class="countdown-message"
+      >
+        HASTA QUE EMPIECE EL SHOW
+      </p>
+
+    </section>
+
+
+    <!-- ================================
+         DETALLES
+    ================================ -->
+
+    <section id="detalles" class="section">
+
+      <div class="section-title">
+
+        <span>✦</span>
+
+        <h2>
+          LOS DETALLES
+        </h2>
+
+        <span>✦</span>
+
+      </div>
+
+      <div class="details-paper">
+
+        <article>
+
+          <div class="icon">
+            ☽
+          </div>
+
+          <h3>
+            CUÁNDO
+          </h3>
+
+          <p>
+            <b>SÁBADO</b><br>
+            17 DE OCTUBRE<br>
+            2026
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <div class="icon">
+            ♧
+          </div>
+
+          <h3>
+            DÓNDE
+          </h3>
+
+          <p>
+            <b>EN EL DEPA</b><br>
+            La ubicación exacta<br>
+            se queda entre nosotros.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <div class="icon">
+            ⏰
+          </div>
+
+          <h3>
+            HORA
+          </h3>
+
+          <p>
+            <b>05:00 PM</b><br>
+            EN ADELANTE<br>
+            HASTA QUE EL CUERPO AGUANTE
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         VESTIMENTA
+    ================================ -->
+
+    <section id="vestimenta" class="section">
+
+      <div class="section-title">
+
+        <span>✦</span>
+
+        <h2>
+          CÓMO VENIR
+        </h2>
+
+        <span>✦</span>
+
+      </div>
+
+
+      <div class="dress">
+
+        <div>
+
+          <p class="section-kicker green">
+            CÓDIGO DE VESTIMENTA
+          </p>
+
+          <h2>
+            VEN COMO QUIERAS.
+          </h2>
+
+          <p>
+            PERO SI QUIERES BRILLAR,
+            TRAE ALGO HALLOWINESCO,
+            O DE COLOR BLANCO,
+            MORADO O VERDE.
+          </p>
+
+        </div>
+
+        <div class="dress-doodle">
+          ✦
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         CONFIRMACIÓN
+    ================================ -->
+
+    <section id="confirmar" class="rsvp section">
+
+      <div class="rsvp-label">
+        ¡CONFIRMA!
+      </div>
+
+      <div class="rsvp-inner">
+
+        <p class="section-kicker">
+          NO FALTES A ESTA CELEBRACIÓN
+        </p>
+
+        <h2>
+          CONFIRMA TU ASISTENCIA
+        </h2>
+
+        <p>
+          Tu respuesta me ayuda a preparar el caos. 🖤
+        </p>
+
+
+        <form id="rsvp-form">
+
+          <!-- NOMBRE -->
+
+          <label for="guest-name">
+            TU NOMBRE
+
+            <input
+              id="guest-name"
+              type="text"
+              name="name"
+              placeholder="Escribe tu nombre"
+              autocomplete="name"
+              required
+            >
+
+          </label>
+
+          <!-- ASISTENCIA -->
+
+          <label for="attendance">
+            ¿ASISTIRÁS?
+
+            <select
+              id="attendance"
+              name="attendance"
+              required
+            >
+
+              <option
+                value=""
+                selected
+                disabled
+              >
+                Selecciona
+              </option>
+
+              <option value="si">
+                Sí, obviamente ✦
+              </option>
+
+              <option value="no">
+                No puedo 😭
+              </option>
+
+            </select>
+
+          </label>
+
+
+          <button id="submit" type="submit">
+            ✦ CONFIRMAR ✦
+          </button>
+
+         
+
+        </form>
+
+
+
+        <p
+          id="form-message"
+          class="form-message"
+          role="status"
+          aria-live="polite"
+        ></p>
+
+         <a id="add-to-calendar" href="https://calendar.app.google/pU3xPTMmtuGg92vU9" target="_blank">
+            <button id="add-button" >Agrega a tu calendario</button>
+          </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================================
+       FOOTER
+  ================================ -->
+
+  <footer>
+
+    <p>
+      ✶ EL SHOW DEBE CONTINUAR ✶
+    </p>
+
+    <small>
+      HECHA CON CAOS Y MUCHO AMOR 🖤
+    </small>
+
+  </footer>
+
+
+  <!-- GARABATOS -->
+
+  <div class="scribble scribble-1">
+    ✶
+  </div>
+
+  <div class="scribble scribble-2">
+    ?
+  </div>
+
+  <div class="scribble scribble-3">
+    ✦
+  </div>
+
+
+  <script src="script.js"></script>
+
 </body>
 </html>
